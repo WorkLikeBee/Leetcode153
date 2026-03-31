@@ -1,0 +1,17 @@
+class Solution {
+    public int findMin(int[] nums) {
+        if (nums.length == 1){
+            return nums[0];
+        }
+        int k = 0;
+        while(k+1 < nums.length && nums[k]<nums[k+1] ){
+            k++;
+        }
+        if (k == nums.length -1){
+            return nums[0];
+        }
+        else{
+            return nums[k+1];
+        }
+    }
+}
